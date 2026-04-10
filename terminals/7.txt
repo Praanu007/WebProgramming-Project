@@ -1,6 +1,0 @@
----
-pid: 33704
-cwd: |
-  C:\Users\prane
----
-PS C:\Users\prane>
