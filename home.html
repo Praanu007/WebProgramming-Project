@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | WebProgramming Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div id="navMount"></div>
+  <main class="shell-container">
+    <section class="hero">
+      <h1 class="display-4 fw-bold">Building things for the web.</h1>
+      <p class="fs-5">This platform presents every Moodle task as a clean learning journey. Each topic is grouped into focused modules with practical demos and layouts. We begin with HTML structure and local server setup in a simple way. Then we move toward semantic elements, forms, and layout practices. After that, we step into CSS styling with consistent visuals and responsive design. JavaScript sections include DOM updates, validation, and event handling. Advanced z-index experiments show how layering impacts real interfaces. jQuery practices demonstrate quick DOM actions and effects. React practice is introduced as a starter module for modern UI thinking. This black, white, and grey themed interface keeps attention on concepts. It is minimal, rounded, and designed for smooth navigation.</p>
+      <a class="btn btn-soft me-2" href="#topic-1">See modules</a>
+      <a class="btn btn-outline-light rounded-3" href="contact.html">Contact me</a>
+    </section>
+
+    <section id="topics-home" class="mt-4">
+      <div id="homeSlides" class="module-card">
+        <div class="slider-controls d-flex justify-content-end gap-2 mb-3">
+          <button class="btn btn-outline-light prev-slide">Previous</button>
+          <button class="btn btn-light next-slide">Next</button>
+        </div>
+
+        <div class="slide active" id="topic-1">
+          <h3>Topic 1: HTML Basics and Local Server</h3>
+          <div class="row g-3 mt-2">
+            <div class="col-md-6">
+              <div class="task-box p-3">
+                <h5><b>Basic HTML Program</b></h5>
+                <p><b>Bold text</b>, <i>italic text</i>, and <u>underlined text</u> are used here as required.</p>
+                <div class="stacked-box s1 mt-3">Services</div>
+                <div class="stacked-box s2 mt-2">Portfolio</div>
+                <div class="stacked-box s3 mt-2">Testimonials</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="task-box p-3">
+                <h5>Restaurant Menu (Lists)</h5>
+                <ul>
+                  <li>Starters</li>
+                  <li>Main Course
+                    <ol>
+                      <li>Paneer Butter Masala</li>
+                      <li>Veg Biryani</li>
+                      <li>Fried Rice</li>
+                      <li>Noodles</li>
+                      <li>Mushroom Curry</li>
+                    </ol>
+                  </li>
+                  <li>Desserts</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide" id="topic-2">
+          <h3>Topic 2: HTML Layouts Practice</h3>
+          <div class="task-box p-3">
+            <p>This layout uses multiple <code>div</code> sections for header, navigation, main content, and footer areas. The three stacked blocks represent Services, Portfolio, and Testimonials with 200px height style. Home sections are arranged with clear spacing and rounded cards. This keeps the practice structure topic-wise and visually organized.</p>
+            <div class="stacked-box s1 mt-3">Services</div>
+            <div class="stacked-box s2 mt-2">Portfolio</div>
+            <div class="stacked-box s3 mt-2">Testimonials</div>
+          </div>
+        </div>
+
+        <div class="slide" id="topic-3">
+          <h3>Topic 3 & 4: HTML Elements and HTML+CSS Practice</h3>
+          <div class="table-card p-3">
+            <table class="w-100">
+              <thead>
+                <tr><th>Photo</th><th>Name</th><th>Roll No</th><th>Department</th><th>Email</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><img src="assets/images/profile.svg" width="55" alt="student"></td><td>Arun</td><td>21BCS001</td><td>CSE</td><td>arun@mail.com</td></tr>
+                <tr><td><img src="assets/images/profile.svg" width="55" alt="student"></td><td>Nila</td><td>21BCS012</td><td>IT</td><td>nila@mail.com</td></tr>
+                <tr><td><img src="assets/images/profile.svg" width="55" alt="student"></td><td>John</td><td>21BCS025</td><td>ECE</td><td>john@mail.com</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="slide" id="topic-4">
+          <h3>Topic 4: HTML CSS Practice Highlights</h3>
+          <div class="task-box p-3">
+            <p>Tables use borders, spacing, zebra striping, and hover effects. Rounded corners, balanced contrast, and neat typography are applied to keep the interface professional. This section summarizes container, cards, and layout concepts from Topic 4 in a single view.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>Pranesh Nivasan | WebProgramming Project</footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

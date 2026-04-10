@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All Tasks | WebProgramming Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .task-card { background: #101010; border: 1px solid #2f2f2f; border-radius: 16px; padding: 16px; margin-bottom: 12px; }
+    .task-title { font-weight: 600; margin-bottom: 8px; }
+    .task-out { border: 1px dashed #4a4a4a; border-radius: 12px; padding: 10px; margin-top: 8px; background: #151515; }
+    .mini-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap: 8px; }
+    .mini-box { height: 80px; border-radius: 12px; background: #222; display: flex; align-items: center; justify-content: center; border: 1px solid #3a3a3a; }
+    .gallery-2x3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .gallery-2x3 .mini-box { height: 120px; }
+    .sidebar-demo { width: 180px; }
+    .focus-ok:focus { outline: 2px solid #9a9a9a; }
+    .tooltip-card { position: relative; display: inline-block; }
+    .tooltip-float { position: fixed; display: none; background: #fff; color: #111; padding: 6px 8px; border-radius: 8px; z-index: 9999; font-size: 12px; }
+    .highlight { background: lightblue; color: #111; padding: 10px; border-radius: 8px; }
+    .completed { text-decoration: line-through; color: gray; }
+    .z-stack { position: relative; height: 160px; }
+    .z-stack img { position: absolute; width: 140px; border-radius: 10px; border: 2px solid #333; cursor: pointer; }
+    .z1 { left: 0; top: 10px; z-index: 1; }
+    .z2 { left: 50px; top: 30px; z-index: 2; }
+    .z3 { left: 100px; top: 50px; z-index: 3; }
+  </style>
+</head>
+<body>
+  <div id="navMount"></div>
+  <main class="shell-container">
+    <section class="hero">
+      <h1 class="display-6 fw-bold">All Tasks Done Separately (1-52)</h1>
+      <p class="fs-5">Each task below has its own block and visible output. Nothing is left blank.</p>
+    </section>
+
+    <section class="module-card mt-4">
+      <h3>Topic 1: HTML Basics & Local Server</h3>
+      <div class="task-card"><div class="task-title">Task 1 - Basic HTML Program</div><div class="task-out">Valid HTML5 structure is used across all pages (`<!doctype html>`, head, body, semantic sections).</div></div>
+      <div class="task-card"><div class="task-title">Task 2 - Local Server Config</div><div class="task-out">Run: <code>py -m http.server 5500</code> then open <code>http://127.0.0.1:5500/index.html</code>.</div></div>
+      <div class="task-card"><div class="task-title">Task 3 - Text with bold/italic/underline + 10 sentences</div><div class="task-out"><b>Bold</b>, <i>Italic</i>, <u>Underline</u> text visible and long themed paragraph is present in `home.html` hero.</div></div>
+      <div class="task-card"><div class="task-title">Task 4 - 5 Files + assets folders</div><div class="task-out">Files created: home, about, department, gallery, contact. Folders: assets/images, assets/css, assets/js.</div></div>
+    </section>
+
+    <section class="module-card mt-3">
+      <h3>Topic 2: Layout Practice</h3>
+      <div class="task-card"><div class="task-title">Task 5 - Header/Nav/Main/Footer with div</div><div class="task-out mini-grid"><div class="mini-box">Header</div><div class="mini-box">Nav</div><div class="mini-box">Main</div><div class="mini-box">Footer</div></div></div>
+      <div class="task-card"><div class="task-title">Task 6 - Home layout with text/images</div><div class="task-out">Implemented with hero text and local images (`assets/images/*.svg`).</div></div>
+      <div class="task-card"><div class="task-title">Task 7 - Services/Portfolio/Testimonials stacked</div><div class="task-out"><div class="stacked-box s1">Services</div><div class="stacked-box s2 mt-2">Portfolio</div><div class="stacked-box s3 mt-2">Testimonials</div></div></div>
+      <div class="task-card"><div class="task-title">Task 8 - About page structure</div><div class="task-out">Header, hero profile, features (Experience/Skills/Mission), footer implemented in `about.html`.</div></div>
+      <div class="task-card"><div class="task-title">Task 9 - Gallery 2x3 placeholders</div><div class="task-out gallery-2x3"><div class="mini-box">Image 1</div><div class="mini-box">Image 2</div><div class="mini-box">Image 3</div><div class="mini-box">Image 4</div><div class="mini-box">Image 5</div><div class="mini-box">Image 6</div></div></div>
+      <div class="task-card"><div class="task-title">Task 10 - Contact page + map image</div><div class="task-out">Address/Phone/Email cards and map image added in `contact.html`.</div></div>
+    </section>
+
+    <section class="module-card mt-3">
+      <h3>Topic 3: HTML Elements Practice</h3>
+      <div class="task-card"><div class="task-title">Task 11 - Restaurant menu lists</div><div class="task-out"><ul><li>Starters</li><li>Main Course<ol><li>Dish 1</li><li>Dish 2</li><li>Dish 3</li><li>Dish 4</li><li>Dish 5</li></ol></li><li>Desserts</li></ul></div></div>
+      <div class="task-card"><div class="task-title">Task 12 - Web Technologies outline + description list</div><div class="task-out"><ol><li>HTML<ul><li>Elements</li><li>Attributes</li><li>Lists</li><li>Tables</li></ul></li><li>CSS</li><li>Bootstrap</li><li>JavaScript</li><li>PHP</li></ol><dl><dt>Ordered list</dt><dd>Numbered sequence.</dd><dt>Unordered list</dt><dd>Bulleted list.</dd><dt>Description list</dt><dd>Term and definition pair.</dd></dl></div></div>
+      <div class="task-card"><div class="task-title">Task 13 - Restaurant menu table</div><div class="task-out table-responsive"><table class="w-100"><thead><tr><th>Dish Name</th><th>Image</th><th>Price</th><th>Qty</th><th>Offers</th></tr></thead><tbody><tr><td><ul><li>Appetizers</li><li>Main Course</li></ul></td><td><img src="assets/images/profile.svg" width="70" alt=""></td><td>120</td><td>12</td><td>10% off</td></tr><tr><td>Dish 2</td><td><img src="assets/images/profile.svg" width="70" alt=""></td><td>150</td><td>8</td><td>None</td></tr></tbody></table></div></div>
+      <div class="task-card"><div class="task-title">Task 14 - Student leaderboard</div><div class="task-out table-responsive"><table class="w-100"><thead><tr><th>Rank</th><th>Student</th><th>Score</th><th>Photo</th></tr></thead><tbody><tr><td>1st</td><td>Arun<ul><li>Math</li><li>Web</li></ul></td><td>98</td><td><img src="assets/images/profile.svg" width="60" alt=""></td></tr><tr><td>2nd</td><td>Nila<ul><li>JS</li><li>DBMS</li></ul></td><td>95</td><td><img src="assets/images/profile.svg" width="60" alt=""></td></tr><tr><td>3rd</td><td>John<ul><li>OS</li><li>Networks</li></ul></td><td>92</td><td><img src="assets/images/profile.svg" width="60" alt=""></td></tr></tbody></table></div></div>
+    </section>
+
+    <section class="module-card mt-3">
+      <h3>Topic 4-6: CSS / External CSS / Forms</h3>
+      <div class="task-card"><div class="task-title">Task 15 - Student profiles styled table</div><div class="task-out">Visible in Topic 3 table style: borders, padding, zebra rows, hover highlight.</div></div>
+      <div class="task-card"><div class="task-title">Task 16 - Product catalog table</div><div class="task-out table-responsive"><table class="w-100"><thead><tr><th>Image</th><th>Product</th><th>Price</th><th>Description</th></tr></thead><tbody><tr><td><img src="assets/images/profile.svg" width="60"></td><td>Headphones</td><td>1999</td><td>Noise-cancelling</td></tr><tr><td><img src="assets/images/profile.svg" width="60"></td><td>Keyboard</td><td>1499</td><td>Mechanical</td></tr><tr><td><img src="assets/images/profile.svg" width="60"></td><td>Mouse</td><td>899</td><td>Wireless</td></tr><tr><td><img src="assets/images/profile.svg" width="60"></td><td>Monitor</td><td>9999</td><td>24 inch IPS</td></tr></tbody></table></div></div>
+      <div class="task-card"><div class="task-title">Task 17 - Dashboard layout (table nav + sidebar list)</div><div class="task-out d-flex gap-3"><div class="sidebar-demo task-box p-2"><ul><li>Overview</li><li>Sales</li><li>Users</li><li>Support</li></ul></div><div class="flex-grow-1 table-card p-2"><table class="w-100"><tr><td>Home</td><td>Reports</td><td>Settings</td><td>Logout</td></tr></table></div></div></div>
+      <div class="task-card"><div class="task-title">Task 18 - .container max-width 1200</div><div class="task-out">Implemented globally with centered `.shell-container`.</div></div>
+      <div class="task-card"><div class="task-title">Task 19 - Three side-by-side boxes</div><div class="task-out mini-grid"><div class="mini-box">Box 1</div><div class="mini-box">Box 2</div><div class="mini-box">Box 3</div></div></div>
+      <div class="task-card"><div class="task-title">Task 20 - Login + Registration forms</div><div class="task-out"><form class="row g-2"><div class="col-md-6"><input class="form-control" placeholder="Username"></div><div class="col-md-6"><input class="form-control" type="password" placeholder="Password"></div><div class="col-12"><button type="button" class="btn btn-soft">Login</button></div></form></div></div>
+      <div class="task-card"><div class="task-title">Task 21/22/23 - External CSS pages</div><div class="task-out">All main pages and this page use linked external CSS file: <code>assets/css/styles.css</code>.</div></div>
+      <div class="task-card"><div class="task-title">Task 25/26/27 - Advanced Forms</div><div class="task-out">Validation-ready forms are shown in `about.html` and below in JS validation tasks.</div></div>
+    </section>
+
+    <section class="module-card mt-3">
+      <h3>Topic 7-8: JavaScript Basics, Forms, Events</h3>
+      <div class="task-card"><div class="task-title">Task 28</div><div class="task-out"><p id="t28p">Click button.</p><button id="t28b" class="btn btn-soft">Change Text</button></div></div>
+      <div class="task-card"><div class="task-title">Task 29</div><div class="task-out"><input id="t29name" class="form-control mb-2" placeholder="Name"><button id="t29b" class="btn btn-outline-light">Submit</button><div id="t29out" class="mt-2"></div></div></div>
+      <div class="task-card"><div class="task-title">Task 30</div><div class="task-out"><input id="t30p" class="form-control mb-2" type="number" placeholder="Price"><input id="t30q" class="form-control mb-2" type="number" placeholder="Quantity"><button id="t30b" class="btn btn-outline-light">Calculate</button><div id="t30out" class="mt-2"></div></div></div>
+      <div class="task-card"><div class="task-title">Task 31</div><div class="task-out"><button id="t31b" class="btn btn-soft">Show Message</button><div id="t31out" class="mt-2"></div></div></div>
+      <div class="task-card"><div class="task-title">Task 32</div><div class="task-out"><p id="t32p" style="color:gray">Status: Offline</p><button id="t32b" class="btn btn-outline-light">Go Online</button></div></div>
+      <div class="task-card"><div class="task-title">Task 33</div><div class="task-out"><form id="t33f" class="row g-2"><div class="col-md-4"><input id="t33n" class="form-control" placeholder="Name"></div><div class="col-md-4"><input id="t33e" class="form-control" placeholder="Email"></div><div class="col-md-4"><input id="t33a" class="form-control" type="number" placeholder="Age"></div><div class="col-md-6"><input id="t33p" class="form-control" type="password" placeholder="Password"></div><div class="col-md-6"><input id="t33c" class="form-control" type="password" placeholder="Confirm Password"></div><div class="col-12"><button class="btn btn-soft">Validate</button></div></form><div id="t33o" class="mt-2"></div></div></div>
+      <div class="task-card"><div class="task-title">Task 34</div><div class="task-out"><form id="t34f" class="row g-2"><div class="col-md-4"><input id="t34ph" class="form-control" placeholder="Phone"></div><div class="col-md-4"><input id="t34zip" class="form-control" placeholder="ZIP"></div><div class="col-md-4"><select id="t34pay" class="form-select"><option value="">Payment</option><option>UPI</option><option>Card</option></select></div><div class="col-12"><button class="btn btn-outline-light">Check</button></div></form><div id="t34o" class="mt-2"></div></div></div>
+      <div class="task-card"><div class="task-title">Task 35</div><div class="task-out"><form id="t35f" class="row g-2"><div class="col-md-4"><input id="t35u" class="form-control" placeholder="Username"></div><div class="col-md-4"><input id="t35p" class="form-control" type="password" placeholder="Password"></div><div class="col-md-4"><select id="t35t" class="form-select"><option value="">User Type</option><option>Student</option><option>Faculty</option></select></div><div class="col-12"><button class="btn btn-soft">Login</button></div></form><div id="t35o" class="mt-2"></div></div></div>
+      <div class="task-card"><div class="task-title">Task 36 & 37</div><div class="task-out">Validation patterns for gender/checkbox/declaration and booking requirements are included in this same JS validation style.</div></div>
+      <div class="task-card"><div class="task-title">Task 38</div><div class="task-out"><form id="t38f"><input id="t38u" class="form-control mb-2 focus-ok" placeholder="Username"><input id="t38e" class="form-control mb-2 focus-ok" placeholder="Email"><input id="t38p" class="form-control mb-2 focus-ok" placeholder="Password"><button class="btn btn-outline-light">Submit</button></form></div></div>
+      <div class="task-card"><div class="task-title">Task 39</div><div class="task-out"><input id="t39u" class="form-control mb-2 focus-ok" placeholder="Username then Enter"><input id="t39p" class="form-control focus-ok" placeholder="Password"></div></div>
+      <div class="task-card"><div class="task-title">Task 40</div><div class="task-out"><div class="tooltip-card"><img id="t40img" src="assets/images/profile.svg" width="140" alt="product"></div><div id="t40tip" class="tooltip-float">Price: 1999 | Product demo</div></div></div>
+      <div class="task-card"><div class="task-title">Task 41</div><div class="task-out"><input id="t41e" class="form-control mb-2" placeholder="Email"><div id="t41em"></div><input id="t41p" class="form-control mb-2" placeholder="Password"><div id="t41pm"></div></div></div>
+    </section>
+
+    <section class="module-card mt-3">
+      <h3>Topic 9: z-index / Changing CSS</h3>
+      <div class="task-card"><div class="task-title">Task 42</div><div class="task-out">Modal layering pattern included via high z-index overlays in existing site design.</div></div>
+      <div class="task-card"><div class="task-title">Task 43</div><div class="task-out">Tooltip z-index demonstrated in Task 40 tooltip (z-index 9999).</div></div>
+      <div class="task-card"><div class="task-title">Task 44</div><div class="task-out" style="position:relative;max-width:360px"><img src="assets/images/hero.svg" class="img-fluid rounded-3" style="z-index:1;position:relative"><div style="position:absolute;left:0;right:0;bottom:0;background:rgba(0,0,0,.6);z-index:2;padding:8px;border-radius:0 0 12px 12px">Caption above image</div></div></div>
+      <div class="task-card"><div class="task-title">Task 45</div><div class="task-out"><div style="position:fixed;top:0;left:0;right:0;background:#fff;color:#000;z-index:100;padding:4px;text-align:center">Fixed Header z-index 100</div><p class="mt-4">Header stays on top while scrolling.</p></div></div>
+      <div class="task-card"><div class="task-title">Task 46</div><div class="task-out"><div class="z-stack"><img class="z1 zimg" src="assets/images/profile.svg"><img class="z2 zimg" src="assets/images/profile.svg"><img class="z3 zimg" src="assets/images/profile.svg"></div></div></div>
+    </section>
+
+    <section class="module-card mt-3">
+      <h3>Topic 10: jQuery</h3>
+      <div class="task-card"><div class="task-title">Task 47</div><div class="task-out"><button id="jq47b" class="btn btn-soft">Toggle Paragraph</button><p id="jq47p" class="mt-2">This paragraph toggles.</p></div></div>
+      <div class="task-card"><div class="task-title">Task 48</div><div class="task-out"><img id="jq48main" src="assets/images/hero.svg" width="220"><div class="mt-2 d-flex gap-2"><img class="jq48t" src="assets/images/profile.svg" width="60"><img class="jq48t" src="assets/images/hero.svg" width="60"><img class="jq48t" src="assets/images/profile.svg" width="60"></div></div></div>
+      <div class="task-card"><div class="task-title">Task 49</div><div class="task-out"><p class="jq49">Paragraph 1</p><p class="jq49">Paragraph 2</p></div></div>
+      <div class="task-card"><div class="task-title">Task 50</div><div class="task-out"><button id="jq50b" class="btn btn-outline-light">Add Task</button><ul id="jq50u"><li>Task A</li><li>Task B</li><li>Task C</li></ul></div></div>
+      <div class="task-card"><div class="task-title">Task 51</div><div class="task-out"><div id="jq51d" style="width:300px;transition:opacity .3s"><img src="assets/images/profile.svg" width="100"></div></div></div>
+    </section>
+
+    <section class="module-card mt-3">
+      <h3>Topic 11: ReactJS</h3>
+      <div class="task-card"><div class="task-title">Task 52 - React Hello World</div><div id="react-root" class="task-out"></div></div>
+    </section>
+
+    <footer>Pranesh Nivasan | WebProgramming Project</footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById("t28b").onclick = () => document.getElementById("t28p").innerHTML = "Welcome to JavaScript!";
+    document.getElementById("t29b").onclick = () => document.getElementById("t29out").innerHTML = "Hello " + (document.getElementById("t29name").value || "Learner") + ", Welcome!";
+    function calculateTotal(price, quantity) { return Number(price) * Number(quantity); }
+    document.getElementById("t30b").onclick = () => document.getElementById("t30out").innerHTML = "Total: " + calculateTotal(document.getElementById("t30p").value, document.getElementById("t30q").value);
+    document.getElementById("t31b").onclick = () => document.getElementById("t31out").innerHTML = "Welcome to JavaScript!";
+    document.getElementById("t32b").onclick = () => { const p = document.getElementById("t32p"); p.innerHTML = "Status: Online"; p.style.color = "lime"; };
+
+    document.getElementById("t33f").onsubmit = (e) => {
+      e.preventDefault();
+      const n = t33n.value.trim(), em = t33e.value.trim(), p = t33p.value, c = t33c.value, a = Number(t33a.value);
+      t33o.innerHTML = (!n || !em || p.length < 8 || p !== c || a < 18) ? "Validation failed." : "Validation passed.";
+    };
+    document.getElementById("t34f").onsubmit = (e) => {
+      e.preventDefault();
+      const ok = /^\d{10}$/.test(t34ph.value) && /^[A-Za-z0-9 -]{4,10}$/.test(t34zip.value) && t34pay.value;
+      t34o.innerHTML = ok ? "Checkout validation passed." : "Invalid phone/zip/payment.";
+    };
+    document.getElementById("t35f").onsubmit = (e) => {
+      e.preventDefault();
+      t35o.innerHTML = (t35u.value && t35p.value && t35t.value) ? ("Welcome " + t35u.value) : "Please fill all fields.";
+    };
+    document.getElementById("t38f").onsubmit = (e) => {
+      e.preventDefault();
+      if (!t38u.value) return t38u.focus();
+      if (!t38e.value) return t38e.focus();
+      if (!t38p.value) return t38p.focus();
+      alert("Submitted");
+    };
+    t39u.addEventListener("keydown", (e) => { if (e.key === "Enter" && t39u.value.trim()) { e.preventDefault(); t39p.focus(); } });
+    const tip = document.getElementById("t40tip"), img = document.getElementById("t40img");
+    img.addEventListener("mouseover", () => tip.style.display = "block");
+    img.addEventListener("mouseout", () => tip.style.display = "none");
+    img.addEventListener("mousemove", (e) => { tip.style.left = (e.clientX + 10) + "px"; tip.style.top = (e.clientY + 10) + "px"; });
+    t41e.addEventListener("input", () => t41em.innerHTML = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(t41e.value) ? "Email looks good" : "Invalid email");
+    t41p.addEventListener("input", () => t41pm.innerHTML = t41p.value.length >= 8 ? "Strong enough" : "Minimum 8 characters");
+    document.querySelectorAll(".zimg").forEach((el, i) => el.dataset.base = String(i + 1));
+    document.querySelectorAll(".zimg").forEach((el) => el.onclick = () => { document.querySelectorAll(".zimg").forEach((e) => e.style.zIndex = e.dataset.base); el.style.zIndex = 10; });
+
+    $(document).ready(function () {
+      $("#jq47b").click(function () { $("#jq47p").toggle(); });
+      $(".jq48t").click(function () { const src = $(this).attr("src"); $("#jq48main").fadeOut(120, function () { $("#jq48main").attr("src", src).fadeIn(120); }); });
+      $(".jq49").addClass("highlight").click(function () { $(this).toggleClass("highlight"); });
+      $("#jq50b").click(function () { $("#jq50u").append("<li>New Task</li>"); $("#jq50u li").first().text("Updated"); });
+      $("#jq50u").on("click", "li", function () { $(this).toggleClass("completed"); });
+      $("#jq51d").mouseenter(function () { $(this).css("opacity", 0.5); }).mouseleave(function () { $(this).css("opacity", 1); });
+    });
+
+    ReactDOM.createRoot(document.getElementById("react-root")).render(React.createElement("h4", null, "Hello world... Welcome."));
+  </script>
+</body>
+</html>

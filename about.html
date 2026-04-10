@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | WebProgramming Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div id="navMount"></div>
+  <main class="shell-container">
+    <section class="hero">
+      <h2>About Layout Practice</h2>
+      <p>This page uses multiple div-based arrangements: header area, hero profile, feature cards, and footer info.</p>
+      <div class="row g-3">
+        <div class="col-md-4"><div class="module-card text-center"><img src="assets/images/profile.svg" class="rounded-circle" alt="profile"><p class="mt-2">Profile Image Placeholder</p></div></div>
+        <div class="col-md-8"><div class="module-card"><h4>Bio</h4><p>I build clean interfaces focused on learning, clarity, and practical coding exercises for web programming students.</p></div></div>
+      </div>
+      <div class="row g-3 mt-1">
+        <div class="col-md-4"><div class="module-card"><span class="icon-badge">E</span>Experience</div></div>
+        <div class="col-md-4"><div class="module-card"><span class="icon-badge">S</span>Skills</div></div>
+        <div class="col-md-4"><div class="module-card"><span class="icon-badge">M</span>Mission</div></div>
+      </div>
+    </section>
+
+    <section id="topics-about">
+      <div id="aboutSlides" class="module-card">
+        <div class="slider-controls d-flex justify-content-end gap-2 mb-3">
+          <button class="btn btn-outline-light prev-slide">Previous</button>
+          <button class="btn btn-light next-slide">Next</button>
+        </div>
+        <div class="slide active" id="topic-5">
+          <h3>Topic 5: External CSS</h3>
+          <p>All pages are linked to <code>assets/css/styles.css</code> using the <code>&lt;link&gt;</code> tag and styled with rounded dark cards.</p>
+          <ul>
+            <li>Course details card/table patterns</li>
+            <li>Product section with hover-ready button styles</li>
+            <li>Responsive contact form block design</li>
+          </ul>
+        </div>
+        <div class="slide" id="topic-6">
+          <h3>Topic 6: Forms Practice</h3>
+          <div class="form-card p-3">
+            <form id="universityForm">
+              <div class="row g-2">
+                <div class="col-md-6"><input class="form-control" placeholder="Name" required></div>
+                <div class="col-md-6"><input class="form-control" placeholder="Email" required></div>
+                <div class="col-md-6"><input id="uPassword" class="form-control" type="password" placeholder="Password"></div>
+                <div class="col-md-6"><input id="uConfirm" class="form-control" type="password" placeholder="Confirm Password"></div>
+                <div class="col-md-4"><input id="uAge" class="form-control" type="number" placeholder="Age"></div>
+              </div>
+              <button class="btn btn-soft mt-3">Validate Form</button>
+              <div id="uniError" class="mt-2"></div>
+            </form>
+          </div>
+        </div>
+        <div class="slide" id="topic-7">
+          <h3>Topic 7: JavaScript Basics</h3>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="task-box p-3 h-100">
+                <p id="welcomeText">Click the button to update this paragraph.</p>
+                <button id="welcomeBtn" class="btn btn-soft">Show Message</button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="task-box p-3 h-100">
+                <input id="nameInput" class="form-control mb-2" placeholder="Enter your name">
+                <button id="nameSubmit" class="btn btn-outline-light">Submit</button>
+                <div id="nameOutput" class="mt-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide" id="topic-8">
+          <h3>Topic 8: Event Listeners</h3>
+          <p>Examples in this project include click listeners, form submit listeners, and input-based interactions for live behavior.</p>
+          <p>Focus, hover, and state-change patterns are ready for extension in your next iteration.</p>
+        </div>
+      </div>
+    </section>
+    <footer>Pranesh Nivasan | WebProgramming Project</footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
